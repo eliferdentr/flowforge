@@ -22,10 +22,10 @@ const (
 type StageStatus string
 
 const (
-	StageStatusPending    StageStatus  = "PENDING"
-	StageStatusInProgress StageStatus  = "IN_PROGRESS"
-	StageStatusCompleted  StageStatus  = "COMPLETED"
-	StageStatusSkipped    StageStatus  = "SKIPPED"
+	StageStatusPending    StageStatus = "PENDING"
+	StageStatusInProgress StageStatus = "IN_PROGRESS"
+	StageStatusCompleted  StageStatus = "COMPLETED"
+	StageStatusSkipped    StageStatus = "SKIPPED"
 )
 
 type ActionType string
@@ -79,6 +79,7 @@ type WorkflowDefinition struct {
 type WorkflowInstance struct {
 	ID                int
 	DefinitionID      int
+	Name              string
 	Stages            []Stage
 	CurrentState      State
 	CurrentStageIndex int
